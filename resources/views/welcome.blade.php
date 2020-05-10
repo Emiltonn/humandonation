@@ -4,12 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>HumanDonation</title>
+        <title>{{ config('app.name', 'Humandonation') }}</title>
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+        <!-- Imports -->
+        <link rel="stylesheet" href="{{ asset ('site/dashboard.css') }}">
+
+
+        <!-- Font Awesome JS -->
+        <script src="https://kit.fontawesome.com/0854c83c54.js" crossorigin="anonymous"></script>
+
+        <link rel="shortcut icon" href="{{ asset ('site/img/favicon.ico')}}" type="image/x-icon">
+        <link rel="icon" href="{{ asset ('site/img/favicon.ico')}}" type="image/x-icon">
+
         <style>
             html, body {
                 background-color: #fff;
@@ -64,21 +80,38 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0e56a2" id="menuPrincipal">
+            <a class="navbar-brand ml-sm-5" href="{{ url ('/')}}">
+                <img src="{{ asset ('site/img/logo-humandonation.png') }}" height="60vh" alt="logo-human-donation">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar -->
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                @if (Route::has('login'))
+                <ul class="navbar-nav ml-auto">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                    <li class="nav-item">
+                    <a class="nav-link active" href="{{ url('/home') }}">{{ _('Home')}}</a>
+                    </li>
+                </ul>
+                @else
+                <ul class="navbar-nav ml-lg-3">
+                    <li class="nav-item mr-lg-3">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    @endif
                     @endauth
-                </div>
-            @endif
-
+                </ul>
+                @endif
+            </div>
+        </nav>
+        <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
                     Laravel

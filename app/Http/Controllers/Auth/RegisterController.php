@@ -9,6 +9,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
+
 class RegisterController extends Controller
 {
     /*
@@ -41,6 +44,16 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+    // public function register(Request $request)
+    // {
+    //     $this->validator($request->all())->validate();
+
+    //     event(new Registered($user = $this->create($request->all())));
+
+    //     return $this->registered($request, $user)
+    //         ?: redirect($this->redirectPath());
+    // }
     /**
      * Get a validator for an incoming registration request.
      *
@@ -49,8 +62,11 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:100'],
+            'perfil' => ['required', 'in:2,3'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -65,8 +81,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'perfis_id' => $data['perfil'],
             'name' => $data['name'],
             'email' => $data['email'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
         ]);
     }

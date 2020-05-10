@@ -35,7 +35,7 @@
 <body id="body">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0e56a2" id="menuPrincipal">
-        <a class="navbar-brand ml-sm-5" href="{{ url ('/')}}">
+            <a class="navbar-brand ml-sm-5" href="{{ url ('/')}}">
                 <img src="{{ asset ('site/img/logo-humandonation.png') }}" height="60vh" alt="logo-human-donation">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +46,8 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Olá, nome</a>
-                    <!--    <a class="nav-link active" href="#">Olá, auth()->user()->name</a> -->
+                        {{-- <a class="nav-link active" href="#">Olá, nome</a> --}}
+                        <a class="nav-link active" href="#">Olá, {{ auth()->user()->name }}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-lg-3">
