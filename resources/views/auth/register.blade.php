@@ -75,7 +75,7 @@
                                 @enderror
                     </div>
                     <div class="form-group">
-                        <input type="text" name="password" class="@error('password') is-invalid @enderror"
+                        <input type="password" name="password" class="@error('password') is-invalid @enderror"
                                style="height: 50px" value="{{ old('password') }}" required
                                placeholder="{{ __('Digite sua Senha')}}" autocomplete="password">
                                @error('password')
@@ -85,7 +85,7 @@
                                 @enderror
                     </div>
                     <div class="form-group">
-                        <input type="text" name="password_confirmation" class="@error('password-confirm') is-invalid @enderror"
+                        <input type="password" name="password_confirmation" class="@error('password-confirm') is-invalid @enderror"
                                style="height: 50px" value="{{ old('password-confirm') }}" required
                                placeholder="{{ __('Confirme sua Senha')}}" autocomplete="password-confirm">
                                @error('password-confirm')

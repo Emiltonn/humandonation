@@ -25,7 +25,7 @@
 
 
     <!-- Font Awesome JS -->
-    <script src="https://kit.fontawesome.com/0854c83c54.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/14b9ffab6c.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="{{ asset ('site/img/favicon.ico')}}" type="image/x-icon">
     <link rel="icon" href="{{ asset ('site/img/favicon.ico')}}" type="image/x-icon">
@@ -46,8 +46,8 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        {{-- <a class="nav-link active" href="#">Olá, nome</a> --}}
-                        <a class="nav-link active" href="#">Olá, {{ auth()->user()->name }}</a>
+                        <a class="nav-link active" href="#">Olá, nome</a>
+                        {{-- <a class="nav-link active" href="#">Olá, {{ auth()->user()->name }}</a> --}}
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-lg-3">

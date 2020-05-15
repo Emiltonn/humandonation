@@ -18,10 +18,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('activation', function () {
+    return view('activation');
+});
+
+Route::get('starterpage', function () {
+return view('layouts.starterpage');
+})->middleware('check.account');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::prefix('ong')->group(function () {
     Route::get('/', function () {
         return view('ong.home');
-    })->middleware('check.account');
+    });
     Route::get('grantees', function () {
         return view('ong.grantee');
     });
@@ -38,14 +50,3 @@ Route::prefix('ong')->group(function () {
         return view('ong.settings');
     });
 });
-    Route::get('activation', function () {
-        return view('activation');
-    });
-
-Route::get('starterpage', function () {
-    return view('layouts.starterpage');
-})->middleware('check.account');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home')->middleware('check.account');

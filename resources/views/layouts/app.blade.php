@@ -16,6 +16,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/14b9ffab6c.js" crossorigin="anonymous"></script>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -28,7 +31,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0e56a2" id="menuPrincipal">
             <a class="navbar-brand ml-sm-5" href="{{ url('/') }}">
-                <img src="/assets/icon.png" height="36" alt="">
+                <img src="{{ asset ('site/img/logo-humandonation.png')}}" height="36" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -86,14 +89,23 @@
                     <i class="fab fa-instagram"></i>
                 </div>
                 <div class="col-6">
-                    <p class="mb-0">Assine nosso Newletter</p>
+                    <p class="mb-0">Assine nosso Newsletter</p>
                     <form class="form-horizontal">
-                        <div class="form-group has-warning has-feedback">
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                              <span class="input-group-text" id="basic-addon2"><i class="fas fa-rss-square"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="{{ __('Seu Email')}}" aria-label="{{ __('Seu Email')}}" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                        {{-- <div class="form-group has-warning has-feedback">
                             <div class="col-12 p-0">
                                 <input type="text" class="form-control">
                                 <span class="form-control-feedback"><span class="material-icons text-primary">send</span></span>
                             </div>
-                        </div>
+                        </div> --}}
                     </form>
                 </div>
             </div>
