@@ -80,7 +80,7 @@
                 <!-- Sidebar  -->
                 <nav id="sidebar">
                     <ul class="list-unstyled components">
-                        <li class="active">
+                        <li >
                             <a href="{{ url ('/ong')}}">
                                 <i class="fas fa-home"></i>
                                 Página Inicial
@@ -129,10 +129,9 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
+            $('#sidebar a').filter(function(){return this.href==location.href}).parent().addClass('active').siblings().removeClass('active')
         });
+     
     </script>
     @yield('scripts')
 </body>

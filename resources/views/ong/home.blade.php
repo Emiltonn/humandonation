@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
     <div class="line"></div>
 </div>
 @endsection
