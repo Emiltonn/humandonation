@@ -84,8 +84,8 @@
         <section class="container h-100" id="home">
             <div class="row">
                 <div class="col-md-7 justify-content-center text-center mb-auto my-md-auto">
-                    <h2 class="font-weight-bolder h2">Conectando pessoas, transformando vidas.</h2>
-                    <h5 class="font-weight- mb-5 h5">Faça sua doação de um jeito rápido, fácil e simples!</h5>
+                    <h1 class="font-weight-bolder h1">Conectando pessoas, transformando vidas.</h2>
+                    <h3 class="font-weight- mb-5 h3">Faça sua doação de um jeito rápido, fácil e simples!</h3>
                     <div class="col-md-5 d-flex d-md-none">
                         <img src="{{ asset ('site/img/pessoas2.png')}}" alt="" class="img-fluid w-100 my-auto">
                     </div>
@@ -100,12 +100,9 @@
         </section>
         <section class="container text-center" id="about">
             <div class="h-100">
-                <h3 class="w-100 font-weight-bold" style="padding-top: 2rem;">Sobre Nós</h3>
+                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Sobre Nós')}}</h1>
                 <div class="row">
                     <div class="col-lg-6 col-sm-3">
-                        {{-- <i class="fas fa-globe-americas fa-7x"></i>
-                        <h2>O que somos</h2>
-                        <p>A Human Donation é uma plataforma que visa educar e ajudar a sociedade no processo de doação com transparência.</p> --}}
                         <div class="card">
                             <div class="card-body">
                                 {{-- <img class="rounded-circle" src="{{ asset ('site/img/icon-humandonation.png')}}" alt="Generic placeholder image" width="140" height="140"> --}}
@@ -117,46 +114,35 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-3">
-                        {{-- <i class="fas fa-globe-americas fa-7x"></i>
-                        <h2>Objetivo</h2>
-                        <p>Intermediar doadores e instituições de caridade.</p> --}}
                         <div class="card">
                             <div class="card-body">
-                              <h5 class="card-title text-center">{{ __('')}}</h5>
-                              <img class="rounded-circle" src="{{ asset ('site/img/icon-humandonation.png')}}" alt="Generic placeholder image" width="140" height="140">
-                              <p class="card-text">{{ __('')}}</p>
+                                <i class="fas fa-hands-helping fa-7x"></i>
+                                <h5 class="card-title text-center">{{ __('Objetivo')}}</h5>
+                              <p class="card-text">{{ __('Intermediar doadores e instituições de caridade.')}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-sm-3">
-                        {{-- <i class="fas fa-globe-americas fa-7x"></i>
-                        <h2>Publico alvo</h2>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul> --}}
                         <div class="card">
                             <div class="card-body">
-                              <h5 class="card-title text-center">#1°</h5>
-                              <img class="rounded-circle" src="{{ asset ('site/img/icon-humandonation.png')}}" alt="Generic placeholder image" width="140" height="140">
-                              <p class="card-text">Emanuel Milton</p>
-                              <a href="#" class="btn btn-primary">150 Doações</a>
+                                <i class="fas fa-users fa-7x"></i>
+                                <h5 class="card-title text-center">{{ __('Publico alvo')}}</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-synagogue fa-lg"></i>&nbsp;&nbsp;{{ __('Instituições de caridade')}}</li>
+                                    <li class="list-group-item"><<i class="fas fa-people-carry fa-lg"></i>&nbsp;&nbsp;{{ __('Doadores')}}</li>
+                                    <li class="list-group-item"><i class="fas fa-synagogue fa-lg"></i>&nbsp;&nbsp;{{ __('Pessoas em vunerabilidade social')}}</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-3">
-                        {{-- <i class="fas fa-globe-americas fa-7x"></i>
-                        <h2>Como trabalhamos</h2>
-                        <p>Por meio de uma plataforma web, realizamos as intermediações e através de redes sociais, mobilizamos a sociedade a doar.</p> --}}
                         <div class="card">
                             <div class="card-body">
-                              <h5 class="card-title text-center">#1°</h5>
-                              <img class="rounded-circle" src="{{ asset ('site/img/icon-humandonation.png')}}" alt="Generic placeholder image" width="140" height="140">
-                              <p class="card-text">Emanuel Milton</p>
-                              <a href="#" class="btn btn-primary">150 Doações</a>
+                                <i class="fas fa-hand-holding-heart fa-7x"></i>
+                                <h5 class="card-title text-center">{{ __('Como trabalhamos')}}</h5>
+                              <p class="card-text">{{ __('Intermediar doadores e instituições de caridade.')}}</p>
                             </div>
                         </div>
                     </div>
@@ -165,7 +151,7 @@
         </section>
         <section class="container h-75 text-center" id="partners">
             <div class="row" id="partners">
-                <h3 class="w-100 font-weight-bold" style="padding-top: 2rem;">Instituições Cadastradas</h3>
+                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Instituições Cadastradas')}}</h1>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -243,27 +229,26 @@
                 </div>  
             </div>
         </section>
+        <section class="container h-75 text-center" id="newsletter">
+            <i class="far fa-envelope-open fa-6x"></i>
+            <h2 class="w-100 font-weight-bold" style="padding: 2rem;">{{ __('Newsletter')}}</h2>
+            <form action="">
+                <div class="input-group mb-3 input-group-lg">
+                    <h3>{{ __('Assine nossa')}}&nbsp;<u>{{ __('newsletter mensal')}}</u>&nbsp;{{ __('para receber as últimas notícias e oportunidades de voluntariado.')}}</h3>
+                    <input type="text" class="form-control" name="newsletter" id="newsletter" placeholder="Insira seu melhor email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </form>
+        </section>
         <footer class="footer" id="footer" >
             <div class="container">
                 <div class="row">
-                    <div class="col-6 justify-content-center" style="margin-left: 16px; margin-right: 15px;">
-                        <p class="mb-0">Redes sociais</p>
+                    <div class="col justify-content-center" style="margin-left: 16px; margin-right: 15px;">
+                        <p class="mb-0">{{ __('Redes sociais')}}</p>
                         <i class="fab fa-facebook" ></i>
                         <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="col-6">
-                        <p class="mb-0">Assine nosso Newsletter</p>
-                        <form class="form-horizontal">
-                            <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon2"><i class="fas fa-rss-square"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="{{ __('Seu Email')}}" aria-label="{{ __('Seu Email')}}" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-secondary" type="button"><i class="fas fa-paper-plane"></i></button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
