@@ -229,18 +229,29 @@
                 </div>  
             </div>
         </section>
+        <section class="container text-center" id="newsletter">
+            <div class="h-100">
+                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Sobre Nós')}}</h1>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-3">
         <section class="container h-75 text-center" id="newsletter">
-            <i class="far fa-envelope-open fa-6x"></i>
-            <h2 class="w-100 font-weight-bold" style="padding: 2rem;">{{ __('Newsletter')}}</h2>
-            <form action="">
-                <div class="input-group mb-3 input-group-lg">
-                    <h3>{{ __('Assine nossa')}}&nbsp;<u>{{ __('newsletter mensal')}}</u>&nbsp;{{ __('para receber as últimas notícias e oportunidades de voluntariado.')}}</h3>
-                    <input type="text" class="form-control" name="newsletter" id="newsletter" placeholder="Insira seu melhor email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-success" type="button"><i class="fas fa-paper-plane"></i></button>
+            <div class="h-100">
+                <i class="far fa-envelope-open fa-6x"></i>
+                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Newsletter')}}</h1>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-6">
+                        <form action="">
+                            <div class="input-group mb-3 input-group-lg">
+                                <h3>{{ __('Assine nossa')}}&nbsp;<u>{{ __('newsletter mensal')}}</u>&nbsp;{{ __('para receber as últimas notícias e oportunidades de voluntariado.')}}</h3>
+                                <input type="text" class="form-control" name="newsletter" id="newsletter" placeholder="Insira seu melhor email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-success" type="button"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
         </section>
         <footer class="footer" id="footer" >
             <div class="container">
