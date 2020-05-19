@@ -129,6 +129,9 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
             $('#sidebar a').filter(function(){return this.href==location.href}).parent().addClass('active').siblings().removeClass('active')
         });
      

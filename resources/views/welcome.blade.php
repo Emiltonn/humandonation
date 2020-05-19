@@ -229,7 +229,7 @@
                 </div>  
             </div>
         </section>
-        <section class="container h-75 text-center" id="newsletter" style="position: relative;">
+        <section class="container h-75 text-center" id="newsletter">
             <i class="far fa-envelope-open fa-6x"></i>
             <h2 class="w-100 font-weight-bold" style="padding: 2rem;">{{ __('Newsletter')}}</h2>
             <form action="">
