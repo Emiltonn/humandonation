@@ -229,17 +229,12 @@
                 </div>  
             </div>
         </section>
-        <section class="container text-center" id="newsletter">
-            <div class="h-100">
-                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Sobre Nós')}}</h1>
-                <div class="row">
-                    <div class="col-lg-6 col-sm-3">
         <section class="container h-75 text-center" id="newsletter">
             <div class="h-100">
                 <i class="far fa-envelope-open fa-6x"></i>
                 <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Newsletter')}}</h1>
                 <div class="row">
-                    <div class="col-lg-12 col-sm-6">
+                    <div class="col-auto">
                         <form action="">
                             <div class="input-group mb-3 input-group-lg">
                                 <h3>{{ __('Assine nossa')}}&nbsp;<u>{{ __('newsletter mensal')}}</u>&nbsp;{{ __('para receber as últimas notícias e oportunidades de voluntariado.')}}</h3>
