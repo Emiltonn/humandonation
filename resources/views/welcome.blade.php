@@ -149,8 +149,8 @@
                 </div>
             </div>
         </section>
-        <section class="container h-75 text-center" id="partners">
-            <div class="row" id="partners">
+        {{-- <section class="container h-75 text-center" id="partners">
+            <div class="h-100" id="partners">
                 <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Instituições Cadastradas')}}</h1>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -165,18 +165,12 @@
                                     <img class="rounded-circle" src="{{ asset ('site/img/pessoas1.png')}}" alt="Generic placeholder image" width="140" height="140">
                                     <h2>Heading</h2>
                                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                                </div><!-- /.col-lg-4 -->
+                                </div>
                                 <div class="col-lg-6 d-none d-lg-block">
                                     <img class="rounded-circle" src="{{ asset ('site/img/pessoas1.png')}}" alt="Generic placeholder image" width="140" height="140">
                                     <h2>Heading</h2>
                                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                                </div><!-- /.col-lg-4 -->
-                                {{-- <div class="col-lg-4 d-none d-lg-block">
-                                    <img class="rounded-circle" src="{{ asset ('site/img/pessoas1.png')}}" alt="Generic placeholder image" width="140" height="140">
-                                    <h2>Heading</h2>
-                                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-                                </div><!-- /.col-lg-4 --> --}}
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -185,17 +179,12 @@
                                     <img class="rounded-circle" src="{{ asset ('site/img/pessoas2.png')}}" alt="Generic placeholder image" width="140" height="140">
                                     <h2>Heading</h2>
                                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                                </div><!-- /.col-lg-4 -->
+                                </div>
                                 <div class="col-lg-6 d-none d-lg-block">
                                     <img class="rounded-circle" src="{{ asset ('site/img/pessoas2.png')}}" alt="Generic placeholder image" width="140" height="140">
                                     <h2>Heading</h2>
                                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                                </div><!-- /.col-lg-4 -->
-                                {{-- <div class="col-lg-4 d-none d-lg-block">
-                                    <img class="rounded-circle" src="{{ asset ('site/img/pessoas2.png')}}" alt="Generic placeholder image" width="140" height="140">
-                                    <h2>Heading</h2>
-                                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                                </div><!-- /.col-lg-4 --> --}}
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -204,31 +193,26 @@
                                     <img class="rounded-circle" src="{{ asset ('site/img/pessoas3.png')}}" alt="Generic placeholder image" width="140" height="140">
                                     <h2>Heading</h2>
                                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                                </div><!-- /.col-lg-4 -->
+                                </div>
                                 <div class="col-lg-6 d-none d-lg-block">
                                     <img class="rounded-circle" src="{{ asset ('site/img/pessoas3.png')}}" alt="Generic placeholder image" width="140" height="140">
                                     <h2>Heading</h2>
                                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                                </div><!-- /.col-lg-4 -->
-                                {{-- <div class="col-lg-4 d-none d-lg-block">
-                                    <img class="rounded-circle" src="{{ asset ('site/img/pessoas3.png')}}" alt="Generic placeholder image" width="140" height="140">
-                                    <h2>Heading</h2>
-                                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                                </div><!-- /.col-lg-4 --> --}}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only">{{ __('Anterior')}}</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only">{{ __('Próximo')}}</span>
                     </a>
                 </div>  
             </div>
-        </section>
+        </section> --}}
         <section class="container h-75 text-center" id="newsletter">
             <div class="h-100">
                 <i class="far fa-envelope-open fa-6x"></i>
