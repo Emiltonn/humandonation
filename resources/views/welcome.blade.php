@@ -44,6 +44,9 @@
                 padding: 5px;
                 padding-bottom: 0;
             }
+            section h1 {
+                padding-bottom: 1em;
+            }
             
         </style>
 
@@ -89,7 +92,7 @@
                     <div class="col-md-5 d-flex d-md-none">
                         <img src="{{ asset ('site/img/pessoas2.png')}}" alt="" class="img-fluid w-100 my-auto">
                     </div>
-                    <a href="#" class="btn btn-primary text-center font-weight-bold btn-quero-doar mt-3">
+                    <a href="{{ route('login') }}" class="btn btn-primary text-center font-weight-bold btn-quero-doar mt-3">
                         <span class="my-auto">QUERO DOAR</span>
                     </a>
                 </div>
@@ -100,7 +103,7 @@
         </section>
         <section class="container text-center" id="about">
             <div class="h-100">
-                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Sobre Nós')}}</h1>
+                <h1 class="w-100 font-weight-bold">{{ __('Sobre Nós')}}</h1>
                 <div class="row">
                     <div class="col-lg-6 col-sm-3">
                         <div class="card">
@@ -213,7 +216,7 @@
                 </div>  
             </div>
         </section> --}}
-        <section class="container h-75 text-center" id="newsletter">
+        <section class="container h-75 p-3 text-center" id="newsletter">
             <div class="h-100">
                 <i class="far fa-envelope-open fa-6x"></i>
                 <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Newsletter')}}</h1>
@@ -232,15 +235,16 @@
                 </div>
             </div>
         </section>
-        <footer class="footer" id="footer" >
+        <footer class="footer mt-3" id="footer" >
             <div class="container">
                 <div class="row">
-                    <div class="col justify-content-center" style="margin-left: 16px; margin-right: 15px;">
-                        <p class="mb-0">{{ __('Redes sociais')}}</p>
-                        <i class="fab fa-facebook" ></i>
-                        <i class="fab fa-instagram"></i>
+                    <div class="col text-center mb-3">
+                        <h4 class="mb-3">{{ __('Redes sociais')}}</h4>
+                        <a href="#facebook" target= "_blank" rel="noreferrer noopener"><i class="fab fa-facebook fa-4x" ></i></a>
+                        <a href="https://www.instagram.com/humandonation/" target= "_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-4x"></i></a>
                     </div>
                 </div>
+                <p class="text-center mb-0">&copy; 2020 - EmanuelMilton - <i class="fab fa-github fa-lg"></i> EMiltonn <p>
             </div>
         </footer>
        <script>

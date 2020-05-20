@@ -121,6 +121,18 @@
                 @yield('content')
             </div>
         </main>
+        <footer class="footer mt-3" id="footer" >
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center mb-3">
+                        <h4 class="mb-3">{{ __('Redes sociais')}}</h4>
+                        <a href="#facebook" target= "_blank" rel="noreferrer noopener"><i class="fab fa-facebook fa-4x" ></i></a>
+                        <a href="https://www.instagram.com/humandonation/" target= "_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-4x"></i></a>
+                    </div>
+                </div>
+                <p class="text-center mb-0">&copy; 2020 - EmanuelMilton - <i class="fab fa-github fa-lg"></i> EMiltonn <p>
+            </div>
+        </footer>
     </div>
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"

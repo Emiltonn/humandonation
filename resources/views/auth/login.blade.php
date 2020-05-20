@@ -44,28 +44,28 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('Lembrar-me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                            <div class="col-md-4 offset-md-4">
-                                <a class="btn btn-link" href="{{ route('register') }}">{{ __('Não possui conta?') }}</a>
-                            </div>
-                        </div>
                     </form>
+                    <div class="form-group row text-center">
+                        <div class="col-md-6 offset-md-4">
+                            @if (Route::has('password.request'))
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Esqueceu sua senha?') }}
+                                </a>
+                            @endif
+                            <button type="submit" class="btn btn-success btn-lg">
+                                {{ __('Login') }}
+                            </button>
+                        </div>
+                        <div class="col-md-6 text-center mt-2">
+                            <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Não possui conta?') }}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
