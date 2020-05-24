@@ -16,6 +16,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/14b9ffab6c.js" crossorigin="anonymous"></script>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -26,24 +29,19 @@
 </head>
 <body id="body">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0e56a2" id="menuPrincipal">
-            <a class="navbar-brand ml-sm-5" href="{{ url('/') }}">
-                <img src="/assets/icon.png" height="36" alt="">
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0e56a2;margin-bottom: 3vh;" id="menuPrincipal">
+            <a class="navbar-brand ml-sm-5" href="{{ url ('/')}}">
+                <img src="{{ asset ('site/img/logo-humandonation.png') }}" height="60vh" alt="logo-human-donation">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <p class="float-rigth text-light" >(beta v0.1.1.0)</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu_superior" aria-controls="menu_superior" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExample04">
+            <!-- navbar -->
+            <div class="collapse navbar-collapse" id="menu_superior">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Sobre <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Instituições</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Suporte</a>
+                        <a class="nav-link active" href="{{ url ('/ong/settings')}}">Olá, {{ auth()->user()->name }}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-lg-3">
@@ -77,26 +75,16 @@
         </main>
     </div>
 
-    <footer class="footer" id="footer">
+    <footer class="footer mt-3" id="footer" >
         <div class="container">
             <div class="row">
-                <div class="col-6 justify-content-center">
-                    <p class="mb-0">Redes sociais</p>
-                    <i class="fab fa-facebook" style="margin-left: 16px; margin-right: 15px;"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <div class="col-6">
-                    <p class="mb-0">Assine nosso Newletter</p>
-                    <form class="form-horizontal">
-                        <div class="form-group has-warning has-feedback">
-                            <div class="col-12 p-0">
-                                <input type="text" class="form-control">
-                                <span class="form-control-feedback"><span class="material-icons text-primary">send</span></span>
-                            </div>
-                        </div>
-                    </form>
+                <div class="col text-center mb-3">
+                    <h4 class="mb-3">{{ __('Siga-nos nas Redes Sociais')}}</h4>
+                    <a href="https://www.facebook.com/HumanDonation/" target= "_blank" rel="noreferrer noopener"><i class="fab fa-facebook fa-4x" ></i></a>
+                    <a href="https://www.instagram.com/humandonation/" target= "_blank" rel="noreferrer noopener"><i class="fab fa-instagram fa-4x"></i></a>
                 </div>
             </div>
+            <a href="https://github.com/Emiltonn" target= "_blank" rel="noreferrer noopener"><p class="text-center mb-0 text-white">&copy; 2020 - EmanuelMilton - <i class="fab fa-github fa-lg"></i> EMiltonn <p></a>
         </div>
     </footer>
     <script

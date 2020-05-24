@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Middleware\CheckVerificationAccount;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Route::prefix('ong')->group(function () {
+Route::get('activation', function () {
+    return view('activation');
+});
+
+Route::get('starterpage', function () {
+return view('layouts.starterpage');
+})->middleware('check.account');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('check.account');
+
+Route::middleware(['auth', 'check.account'])->prefix('ong')->group(function () {
+    
     Route::get('/', function () {
         return view('ong.home');
     });
@@ -37,11 +51,3 @@ Route::prefix('ong')->group(function () {
         return view('ong.settings');
     });
 });
-
-Route::get('starterpage', function () {
-    return view('layouts.starterpage');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

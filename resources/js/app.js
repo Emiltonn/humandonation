@@ -12,6 +12,7 @@ import 'select2/dist/css/select2.min.css'
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.mask = require('jquery-mask-plugin'); //importando jquerymaskplugin
 
 /**
  * The following block of code may be used to automatically register your
