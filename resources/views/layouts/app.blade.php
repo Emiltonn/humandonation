@@ -37,35 +37,32 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu_superior" aria-controls="menu_superior" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- navbar -->
+            <!-- navbar rigth -->
             <div class="collapse navbar-collapse" id="menu_superior">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ url ('/ong/settings')}}">Olá, {{ auth()->user()->name }}</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-lg-3">
+                <ul class="navbar-nav ml-auto navbar-rigth">
                     @guest
-                        <li class="nav-item mr-lg-3">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <li class="nav-item mr-lg-3">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
                         @endif
                     @else
-                        <li class="nav-item">
-                            <a class="btn btn-primary" href="{{ route('logout') }}"
-                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url ('/ong/settings')}}">{{ __('Hello!')}}, {{ auth()->user()->name }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
                     @endguest
-
                 </ul>
             </div>
         </nav>
