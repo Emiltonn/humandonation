@@ -11,7 +11,7 @@
 
 Human Donation é uma plataforma que visa educar e ajudar a sociedade no processo de doação com transparência.
 
-## beta v0.1.1
+## beta v0.1.1.0
 
 Adicionada versão estável e final da home para lançamento de MVP
 

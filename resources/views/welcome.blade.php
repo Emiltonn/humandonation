@@ -54,12 +54,12 @@
             <a class="navbar-brand ml-sm-5" href="{{ url ('/')}}">
                 <img src="{{ asset ('site/img/logo-humandonation.png') }}" height="60vh" alt="logo-human-donation">
             </a>
-            <p class="float-rigth text-light" >(beta v0.1.1)</p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <p class="float-rigth text-light" >(beta v0.1.1.0)</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu_superior" aria-controls="menu_superior" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- navbar -->
-            <div class="collapse navbar-collapse" id="navbarsExample04">
+            <div class="collapse navbar-collapse" id="menu_superior">
                 @if (Route::has('login'))
                 <ul class="navbar-nav ml-auto">
                     @auth

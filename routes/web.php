@@ -28,9 +28,10 @@ return view('layouts.starterpage');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('check.account');
 
-Route::prefix('ong')->group(function () {
+Route::middleware(['auth', 'check.account'])->prefix('ong')->group(function () {
+    
     Route::get('/', function () {
         return view('ong.home');
     });
