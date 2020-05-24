@@ -54,6 +54,7 @@
             <a class="navbar-brand ml-sm-5" href="{{ url ('/')}}">
                 <img src="{{ asset ('site/img/logo-humandonation.png') }}" height="60vh" alt="logo-human-donation">
             </a>
+            <p class="float-rigth text-light" >(beta v0.1.1)</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -219,13 +220,13 @@
         <section class="p-3 text-center" id="newsletter">
             <div class="container">
                 <i class="far fa-envelope-open fa-6x"></i>
-                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Newsletter')}}</h1>
+                <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Newsletter')}} <p>(EM BREVE!)</p> </h1>
                 <div class="row">
                     <div class="col-auto">
                         <form action="">
                             <div class="input-group mb-3 input-group-lg">
                                 <h3>{{ __('Assine nossa')}}&nbsp;<u>{{ __('newsletter mensal')}}</u>&nbsp;{{ __('para receber as últimas notícias e oportunidades de voluntariado.')}}</h3>
-                                <input type="text" class="form-control" name="newsletter" id="newsletter" placeholder="Insira seu melhor email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" name="newsletter" id="newsletter" placeholder="{{ __('Insira seu melhor email')}}" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
                                 <div class="input-group-append">
                                     <button class="btn btn-success" type="button"><i class="fas fa-paper-plane"></i></button>
                                 </div>
