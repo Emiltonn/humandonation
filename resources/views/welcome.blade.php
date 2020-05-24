@@ -216,8 +216,8 @@
                 </div>  
             </div>
         </section> --}}
-        <section class="container h-75 p-3 text-center" id="newsletter">
-            <div class="h-100">
+        <section class="p-3 text-center" id="newsletter">
+            <div class="container">
                 <i class="far fa-envelope-open fa-6x"></i>
                 <h1 class="w-100 font-weight-bold" style="padding-top: 2rem;">{{ __('Newsletter')}}</h1>
                 <div class="row">
