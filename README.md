@@ -14,6 +14,7 @@ Human Donation é uma plataforma que visa educar e ajudar a sociedade no process
 ## beta v0.1.1.0
 
 Adicionada versão estável e final da home para lançamento de MVP
+Adicionado arquivos de traduções: Turco, Espanhol, Portugûes Brasileiro e Francês
 
 ## Laravel Sponsors
 
