@@ -65,21 +65,6 @@
                             </div>
                         </div>
                     </form>
-                    <div class="form-group row text-center">
-                        <div class="col-md-6 offset-md-4">
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Esqueceu sua senha?') }}
-                                </a>
-                            @endif
-                            <button type="submit" class="btn btn-success btn-lg">
-                                {{ __('Login') }}
-                            </button>
-                        </div>
-                        <div class="col-md-6 text-center mt-2">
-                            <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Não possui conta?') }}</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
